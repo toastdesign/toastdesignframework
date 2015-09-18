@@ -3,6 +3,7 @@
 	display: block;
 	float: left;
 	width: 100%;
+	background-color:$color__background-nav;
 
 	ul {
 		display: none;
@@ -11,15 +12,14 @@
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
-			top: 1.5em;
-			left: -999em;
+			left:-999em;
 			z-index: 99999;
+			background-color:lighten($color__background-nav, 10%); 
 
 			ul {
-				left: -999em;
+				left:-999em;
 				top: 0;
 			}
 
@@ -36,6 +36,7 @@
 
 			:hover > a,
 			.focus > a {
+				background-color: lighten($color__background-nav,30%);
 			}
 
 			a:hover,
@@ -54,16 +55,22 @@
 
 		&:hover > a,
 		&.focus > a {
+			background-color: lighten($color__background-nav,20%);
 		}
 	}
 	a {
 		display: block;
 		text-decoration: none;
+		padding:1em 1.5em;
+		line-height: 1em;
+		color:white;
+
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a {
+		background-color: lighten($color__background-nav,50%);
 	}
 }
 
