@@ -26,7 +26,7 @@ gulp.task('styles', function(){
 	gulp.src('sass/style.scss')
 		.pipe(plumber())
 		.pipe(sass())
-		.pipe(prefixr('last 4 versions'))
+		.pipe(prefixr('last 3 versions'))
 		.pipe(gulp.dest(''));
 });
 
@@ -36,4 +36,4 @@ gulp.task('watch', function(){
 	gulp.watch('sass/**/*.scss', ['styles']);
 });
 
-gulp.task('default', ['scripts', 'styles', 'image', 'watch']);
+gulp.task('default', ['styles', 'image', 'watch']);
