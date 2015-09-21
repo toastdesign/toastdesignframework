@@ -15,8 +15,9 @@
 			deflay:200,
 			speed: 'fast'
 		});
-	} else if ($(document).width() < breakpoint){
-		sf.superfish('destroy');
+		} else if ($(document).width() < breakpoint){
+			sf.superfish('destroy');
+		}
 	});
 
 	
