@@ -120,3 +120,32 @@ function toast_design_category_transient_flusher() {
 }
 add_action( 'edit_category', 'toast_design_category_transient_flusher' );
 add_action( 'save_post',     'toast_design_category_transient_flusher' );
+
+
+/* ==========================================================================
+Social media menu
+========================================================================== */
+function toast_design_social_menu () {
+	if ( has_nav_menu ('social' ) ) {
+		wp_nav_menu(
+			array(
+				'theme_location' => 'social',
+				'menu' => '',
+				'container' => 'div',
+				'container_class' => 'menu-social',
+				'container_id' => 'menu-social',
+				'menu_class' => 'menu-items',
+				'menu_id' => 'menu-social-items',
+				'echo' => true,
+				'fallback_cb' => 'wp_page_menu',
+				'before' => '',
+				'after' => '',
+				'link_before' => '<span class="screen-reader-text">',
+				'link_after' => '</span>',
+				'items_wrap' => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+				'depth' => 1,
+				'walker' => ''
+			)
+		);
+	}
+}
