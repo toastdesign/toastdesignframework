@@ -80,14 +80,110 @@
 	display: block;
 }
 
+// Small mobile navigation
+
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
+		
 	}
 	.main-navigation ul {
 		display: block;
 	}
 }
+
+@include breakpoint(max-width 37.5em){
+	.main-navigation {
+		.nav-menu {
+			overflow:hidden;
+			border-top:1px solid #444;
+		}
+	}
+
+	.main-navigation {
+		
+		ul {
+
+			ul {
+				float: none;
+				position: static;
+				left:auto;
+				z-index: 0;
+				background-color:$color__background-nav; 
+
+				ul {
+					li {
+						a {
+							padding-left:3.5em;
+						}
+					}
+				}
+
+				li {
+
+					&:hover > ul,
+					&.focus > ul {
+						
+					}
+
+					a {
+						padding-left:2.5em;
+					}
+				}
+
+				a {
+
+					width: auto;
+				}
+
+				:hover > a,
+				.focus > a {
+					
+				}
+
+				a:hover,
+				a.focus {
+				}
+			}
+
+			li:hover > ul,
+			li.focus > ul {
+				left: auto;
+				display:block;
+			}
+		}
+		li {
+			float:none;
+			clear:both;
+			display:block;
+
+			&:hover > a,
+			&.focus > a {
+				
+			}
+		}
+		a {
+			border-top:1px solid #444;
+		}
+
+		> li:first-child {
+			a {
+				border-top:none;
+			}
+		}
+
+		.current_page_item > a,
+		.current-menu-item > a,
+		.current_page_ancestor > a {
+			background-color: lighten($color__background-nav,30%);
+		}
+	}
+}
+
+
+/* ==========================================================================
+secundary navigations in post ect
+========================================================================== */
 
 .comment-navigation,
 .posts-navigation,
