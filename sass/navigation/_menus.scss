@@ -275,13 +275,14 @@ Social menu
 	// responsive part
 	@include breakpoint(max-width 600px){
 		ul {
-			position: absolute;
+			// position: absolute;
 			top:0;
 			right:0;
 			display: block;
 
 			li {
 				a {
+					border:none;
 					padding-left:.5em;
 					padding-right:.5em;
 				}
