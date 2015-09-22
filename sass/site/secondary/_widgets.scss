@@ -53,17 +53,21 @@ Footer widgets
 	@include layout(12 0.25 inside);
 	
 	.grid-sizer {
-		@include span(3);
+		
+		@include span(12);
+
+		@include breakpoint($portrait){
+			@include span(3);
+		}
 		
 	}
 
 	.widget {
 		
-		@include span(3);
+		@include span(12);
 		
-		
-		&:nth-child(4){
-			@include last;
+		@include breakpoint($portrait){
+			@include span(3);
 		}
 
 		a {
