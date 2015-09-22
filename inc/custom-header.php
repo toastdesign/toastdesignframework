@@ -26,8 +26,8 @@ function toast_design_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'toast_design_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 1980,
+		'height'                 => 450,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'toast_design_header_style',
 		'admin-head-callback'    => 'toast_design_admin_header_style',
@@ -58,8 +58,7 @@ function toast_design_header_style() {
 		// Has the text been hidden?
 		if ( 'blank' === $header_text_color ) :
 	?>
-		.site-title,
-		.site-description {
+		.site-branding {
 			position: absolute;
 			clip: rect(1px, 1px, 1px, 1px);
 		}

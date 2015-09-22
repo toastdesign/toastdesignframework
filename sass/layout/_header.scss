@@ -1,0 +1,45 @@
+.header-img {
+	
+	img {
+		display:block;
+		margin:0 auto;
+	}
+}
+
+.header-background-image {
+	background: no-repeat center;
+	background-size: cover;
+}
+
+.title-box {
+	border:1px solid white;
+	display:inline-block;
+	padding:0 3rem;
+	background-color:rgba(0,0,0,0.2);
+}
+
+
+.site-branding {
+	padding:2rem 0;
+	text-align: center;
+	background-color: red;
+	color:#fff;
+	a {
+		color:inherit;
+	}
+}
+
+.site-title {
+	font-weight: 700;
+	font-size:2rem;
+	text-transform: uppercase;
+	line-height: normal;
+	padding-bottom:1rem;
+	color:#fff;
+}
+
+.site-description {
+	font-weight:100;
+	font-size:1.5rem;
+}
+
