@@ -48,9 +48,7 @@
 Footer widgets
 ========================================================================== */
 .footer-widgets {
-	overflow:hidden;
-	
-	@include layout(12 0.25 inside);
+	@include container;
 	
 	.grid-sizer {
 		

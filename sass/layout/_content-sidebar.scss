@@ -1,5 +1,12 @@
+.site-content {
+	@include container;
+	background-color: #efefef;
+}
+
 .content-area {
 	
+	background-color: #fff;
+
 	@include breakpoint($portrait){
 		@include span(9);
 	}
@@ -18,11 +25,16 @@
 }
 
 .site-footer {
-	
-	@include container;
 
 	background-color:#444;
 	color:#fff;
+
+	.site-info,
+	.menu-social {
+		@include breakpoint($portrait){
+			@include span(6);
+		}
+	}
 
 	a {
 		color:inherit;

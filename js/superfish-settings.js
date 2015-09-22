@@ -12,9 +12,9 @@
 	$(window).resize(function(){
 		if($(document).width() >= breakpoint & !sf.hasClass('sf-js-enabled')){
 			sf.superfish({
-			deflay:200,
-			speed: 'fast'
-		});
+				deflay:200,
+				speed: 'fast'
+			});
 		} else if ($(document).width() < breakpoint){
 			sf.superfish('destroy');
 		}

@@ -1,11 +1,6 @@
 .main-navigation {
-	position: relative;
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
 	background-color:$color__background-nav;
-
+	
 	ul {
 		display: none;
 		list-style: none;
@@ -98,7 +93,6 @@
 /* ==========================================================================
 Mobile menu
 ========================================================================== */
-
 @include breakpoint(max-width 37.5em){
 	.main-navigation {
 		.nav-menu {
@@ -191,15 +185,40 @@ Mobile menu
 Social menu
 ========================================================================== */
 .menu-social  {
+	
 	ul {
-		float:right;
+		margin:0;
+		padding:0;
+		
 		text-align: center;
 		list-style: none;
+		
 		li {
 			position: relative;
-			display: inline-block;
-
+			float:left;
+			background-color: transparent;
+			
+			&:hover {
+				background-color: #fff;
+				a[href*="wordpress.org"]::before,
+				a[href*="wordpress.com"]::before {color:   #21759b;}
+				a[href*="facebook.com"]::before {color:   #3b5998;}
+				a[href*="twitter.com"]::before {color:   #33ccff;}
+				a[href*="dribbble.com"]::before {color:   #ea4c89;}
+				a[href*="plus.google.com"]::before {color: #dd4b39;}
+				a[href*="pinterest.com"]::before {color:   #c8232c;}
+				a[href*="github.com"]::before {color:   #171515;}
+				a[href*="tumblr.com"]::before {color:   #34526f;}
+				a[href*="youtube.com"]::before {color:   #c4302b;}
+				a[href*="flickr.com"]::before {color:   #ff0084;}
+				a[href*="vimeo.com"]::before {color:   #1AB7EA;}
+				a[href*="instagram.com"]::before {color:   #3f729b;}
+				a[href*="codepen.io"]::before {color:   #000;}
+				a[href*="linkedin.com"]::before {color:   #0e76a8;}
+			}
+			
 			a {
+
 				padding-left:.5em;
 				padding-right:.5em;
 				&:before {
