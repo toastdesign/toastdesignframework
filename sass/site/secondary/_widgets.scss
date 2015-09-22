@@ -1,5 +1,36 @@
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 0 2.5em;
+	font-size:14px;
+
+	.widget-title {
+		margin-bottom: 1.5em;
+		font-size:1.5rem;
+		border-bottom:1px solid #000;
+	}
+
+	a {
+		font-weight: 700;
+		color:inherit;
+	}
+
+	ol,ul {
+		list-style-type: none;
+		padding:0;
+		margin:0;
+
+		li {
+			padding:1em 0 0;
+
+			ul,
+			ol {
+				margin-top:0;
+
+				li {
+					margin-left:1.5em;
+				}
+			}
+		}
+	}
 
 	/* Make sure select elements fit in widgets. */
 	select {
@@ -11,3 +42,66 @@
 .widget_search .search-submit {
 	display: none;
 }
+
+
+/* ==========================================================================
+Footer widgets
+========================================================================== */
+.footer-widgets {
+	overflow:hidden;
+	
+	@include layout(12 0.25 inside);
+	
+	.grid-sizer {
+		@include span(3);
+		
+	}
+
+	.widget {
+		
+		@include span(3);
+		
+		
+		&:nth-child(4){
+			@include last;
+		}
+
+		a {
+			color:#fff;
+
+		}
+
+		.widget-title {
+			border-color:#fff;
+		}
+	}
+}
+
+
+
+/* ==========================================================================
+Specific Widgets
+========================================================================== */
+.widget_archive {}
+
+.widget_calendar {}
+
+.widget_categories {}
+
+.widget_pages {}
+
+.widget_meta {}
+
+.widget_recent_comments {}
+
+.widget_recent_entries {}
+
+.widget_rss {}
+
+.widget_search {}
+
+.widget_text {}
+
+.widget_tag_cloud {}
+
+.widget_nav_menu {}
