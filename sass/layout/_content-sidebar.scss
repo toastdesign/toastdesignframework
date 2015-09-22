@@ -18,5 +18,13 @@
 }
 
 .site-footer {
-	clear: both;
+	
+	@include container;
+
+	background-color:#444;
+	color:#fff;
+
+	a {
+		color:inherit;
+	}
 }
